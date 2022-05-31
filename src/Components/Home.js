@@ -2,17 +2,8 @@ import { useEffect, useState } from "react"
 import RecipeList from "./RecipeList"
 import DisplayRecipe from "./DisplayRecipe"
 
-function Home()
+function Home({ recipeList })
 {
-    const [recipeList, setRecipeList] = useState([])
-
-    useEffect(() =>
-    {
-      fetch("http://localhost:3000/recipes")
-      .then(resp => resp.json())
-      .then(setRecipeList)
-    }, [])
-  
     //click on recipe that is listed
     const [clickedId, setClickedId] = useState("")
     const handleRecipeClick = (id) =>
