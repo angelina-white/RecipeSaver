@@ -14,8 +14,6 @@ function Recipe({ item })
         return <li>{item}</li>
     })
 
-    console.log(instructions)
-
     return (
         <div>
             <h2>{ name }</h2>
@@ -24,6 +22,7 @@ function Recipe({ item })
             <ul>
                 {displayIngredients}
             </ul>
+            <h3>Instructions:</h3>
             <ol>
                 {displayInstructions}
             </ol>

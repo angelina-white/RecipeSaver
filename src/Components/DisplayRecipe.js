@@ -1,7 +1,16 @@
 import Recipe from "./Recipe"
+import { useState } from "react"
 
-function DisplayRecipe({ clickedItem })
+function DisplayRecipe({ recipeList, clickedId, searchItem })
 {
+
+    const clickedItem = recipeList.filter((item) =>
+    {
+        return (
+        item.id === clickedId
+        )
+    })
+
     const displayItem = clickedItem.map((item) =>
     {
         return (
