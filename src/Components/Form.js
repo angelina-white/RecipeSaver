@@ -12,6 +12,13 @@ function Form()
         setName(event.target.value)
     }
 
+    //image link
+    const [imageLink, setImageLink] = useState("")
+    function handleImage(event)
+    {
+        setImageLink(event.target.value)
+    }
+
     //ingredient
     const [ingredient, setIngredient] = useState("")
     function handleIngredient(event)
@@ -75,9 +82,17 @@ function Form()
     function handleSubmit(event)
     {
         event.preventDefault()
-        console.log(name)
-        console.log(ingList)
-        console.log(instList)
+        
+        const newObj = 
+        {
+            name: name,
+            image: imageLink,
+            ingredients: ingList, 
+            instructions: instList
+        }
+
+        console.log(newObj)
+
     }
 
 
@@ -86,6 +101,7 @@ function Form()
             <h2>Add Recipe:</h2>
             <div>
                 <input name="name" onChange={handleName} placeholder="Recipe name" />
+                <input name="image" onChange={handleImage} placeholder="Image link" />
                 <p>Ingredients:</p>
                 <input name="ingredient" onChange={handleIngredient} placeholder="Ingredient" />
                 <button onClick={addIng}>Add ingredient</button>
