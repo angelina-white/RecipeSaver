@@ -1,4 +1,5 @@
 import { useState } from "react"
+import FormIng from "./FormIng"
 
 function Form()
 {
@@ -23,10 +24,22 @@ function Form()
         setIngList([...ingList, ingredient])
     }
 
+    console.log("ingList: " + ingList)
+
+    // const [removedItem, setRemovedItem] = useState("")
+    const removeIng = (name) =>
+    {
+        const filteredIng = ingList.filter((item) =>
+        {
+            return item !== name
+        })
+        setIngList(filteredIng)
+    }
+
     const dispIng = ingList.map((item) =>
     {
         return (
-            <li>{item}</li>
+            <FormIng item={item} removeIng={removeIng}/>
         )
     })
 
