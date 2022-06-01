@@ -15,14 +15,16 @@ function Recipe({ item })
     })
 
     return (
-        <div>
-            <h2>{ name }</h2>
+        <div class="singleRecipeDisplayed">
+            <h3 id="dispRecName">{ name }</h3>
             {/* <img src={image} /> */}
-            <h3>Ingredients:</h3>
-            <ul>
-                {displayIngredients}
-            </ul>
-            <h3>Instructions:</h3>
+            <div class="ingredients">
+                <h4>Ingredients:</h4>
+                <ul>
+                    {displayIngredients}
+                </ul>
+            </div>
+            <h4>Instructions:</h4>
             <ol>
                 {displayInstructions}
             </ol>

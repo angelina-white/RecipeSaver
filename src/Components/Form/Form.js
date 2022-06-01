@@ -2,6 +2,7 @@ import { useState } from "react"
 import FormIng from "./FormIng"
 import FormInst from "./FormInst"
 
+
 function Form()
 {
     //name
@@ -112,20 +113,31 @@ function Form()
         <div>
             <h2>Add Recipe:</h2>
             <div>
-                <input name="name" onChange={handleName} placeholder="Recipe name" />
-                <input name="image" onChange={handleImage} placeholder="Image link" />
-                <p>Ingredients:</p>
-                <input name="ingredient" onChange={handleIngredient} placeholder="Ingredient" />
-                <button onClick={addIng}>Add ingredient</button>
-                <ul>
-                    {dispIng}
-                </ul>
-                <p>Instructions:</p>
-                <input name="instruction" onChange={handleInstruction} placeholder="Instuction" />
-                <button onClick={addInst}>Add instruction</button>
-                <ul>
-                    {dispInst}
-                </ul>
+                <label>
+                    Name:
+                    <input name="name" onChange={handleName} placeholder="Enter..." />
+                </label>
+                <label>
+                    Image Link:
+                    <input name="image" onChange={handleImage} placeholder="Enter..." />
+                </label>
+
+                <label>
+                    Ingredients: 
+                    <input name="ingredient" onChange={handleIngredient} placeholder="Enter" />
+                    <button onClick={addIng}>Add ingredient</button>
+                    <ul>
+                        {dispIng}
+                    </ul>
+                </label>
+                <label>
+                    Instructions: 
+                    <input name="instruction" onChange={handleInstruction} placeholder="Instuction" />
+                    <button onClick={addInst}>Add instruction</button>
+                    <ul>
+                        {dispInst}
+                    </ul>
+                </label>
                 <button onClick={handleSubmit}>Submit</button>
             </div>
         </div>

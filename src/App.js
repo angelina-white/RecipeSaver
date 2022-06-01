@@ -1,10 +1,11 @@
 import './App.css';
-import { useEffect, useState } from "react"
-import Home from "./Components/Home"
-import Form from "./Components/Form"
-import Favorites from "./Components/Favorites"
-import Search from "./Components/Search"
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
+import { useEffect, useState } from "react";
+import Home from "./Components/Home/Home";
+import Form from "./Components/Form/Form";
+import Search from "./Components/Search/Search";
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col, Stack } from 'react-bootstrap';
 
 function App() 
 {
@@ -19,36 +20,38 @@ function App()
   }, [])
 
 
-  // //click on recipe that is listed
-  // const [clickedId, setClickedId] = useState("")
-  // const handleRecipeClick = (id) =>
-  // {
-  //   setClickedId(id)
-  // }
-
   return (
     <div className="App">
-      {/* <h1>Recipe Saver</h1>
-      <Search handleSearch={ handleSearch }/>
-      <RecipeList recipeList={ recipeList } handleRecipeClick={ handleRecipeClick }/>
-      <DisplayRecipe recipeList={ recipeList } clickedId={ clickedId } searchItem={ searchItem }/> */}
+      <div class="titleContainer">
+        <Container>
+          <Row>
+            <Col>
+              <h1 id="title">Recipe Saver</h1>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       <Router>
-        <h1>Recipe Saver</h1>
-          <nav>
-            <ul>
-              <li><Link to='/'>Home</Link></li>
-              <li><Link to='form'>Add Recipe</Link></li>
-              <li><Link to='favorites'>Favorites</Link></li>
-              <li><Link to='search'>Search</Link></li>
-            </ul>
-          </nav>
-          <Routes>
-            <Route path='/' element={ <Home recipeList={ recipeList }/>} />
-            <Route path='/form' element={ <Form />} />
-            <Route path='/favorites' element={ <Favorites />} />
-            <Route path='/search' element={ <Search recipeList={ recipeList }/>} />
-          </Routes>
-        </Router>
+        <div class="navBarContainer">
+          <Container>
+            <Row>
+              <Col>
+                <Stack direction="horizontal" gap={3}>
+                  <li class="navLinks"><Link to='/'>Home</Link></li>
+                  <li class="navLinks"><Link to='form'>Add Recipe</Link></li>
+                  <li class="navLinks"><Link to='search'>Search</Link></li>
+                </Stack>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+            
+        <Routes>
+          <Route path='/' element={ <Home recipeList={ recipeList }/>} />
+          <Route path='/form' element={ <Form />} />
+          <Route path='/search' element={ <Search recipeList={ recipeList }/>} />
+        </Routes>
+      </Router>
     </div>
 
     

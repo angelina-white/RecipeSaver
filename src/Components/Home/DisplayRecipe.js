@@ -1,7 +1,5 @@
-import Recipe from "./Recipe"
-import { useState } from "react"
-
-function DisplayRecipe({ recipeList, clickedId, searchItem })
+import Recipe from "../Recipe"
+function DisplayRecipe({ recipeList, clickedId })
 {
 
     const clickedItem = recipeList.filter((item) =>
@@ -19,8 +17,8 @@ function DisplayRecipe({ recipeList, clickedId, searchItem })
     })
 
     return(
-        <div>
-            <h1>Recipe:</h1>
+        <div class="displayRecipeContainer">
+            <h2>Recipe:</h2>
             {displayItem}
         </div>
     )

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Recipe from "./Recipe"
+import Recipe from "../Recipe"
 import SearchName from "./SearchName"
 
 function Search({ recipeList })

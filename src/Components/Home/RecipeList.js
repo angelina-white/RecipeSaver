@@ -1,4 +1,5 @@
 import RecipeName from "./RecipeName"
+import { Stack } from 'react-bootstrap';
 
 function RecipeList({ recipeList, handleRecipeClick })
 {
@@ -10,11 +11,11 @@ function RecipeList({ recipeList, handleRecipeClick })
     })
 
     return (
-        <div>
-            <h2>List of recipes</h2>
-            <ul>
-                {nameList}
-            </ul>
+        <div class="recipeListContainer">
+                <h2 id="recipeListTitle">Recipes</h2>
+                <Stack gap={3}>
+                    {nameList}
+                </Stack>
         </div>
     )
 }

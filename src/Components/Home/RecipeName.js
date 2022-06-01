@@ -6,7 +6,7 @@ function RecipeName({ id, item, handleRecipeClick })
     }
 
     return (
-        <li onClick={handleClick}>{ item }</li>
+        <li class="recipeName" onClick={handleClick}>{ item }</li>
     )
 }
 

@@ -1,38 +1,81 @@
-.App {
+/* All */
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App.js title */
+.titleContainer {
+  background-color: pink;
+  height: 85p x;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#title {
+  font-size: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* App.js navBar */
+.navBarContainer {
+  background-color: aquamarine;
+  font-size: 20px;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.navLinks {
+  list-style: none;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navLinks:hover { 
+  background-color: yellow;
+}
+
+/* Home.js recipe list */
+.recipeListContainer {
+  background-color: green;
+  height: 200%;
+  margin-top: -76px;
+  margin-left: -72px;
+}
+
+#recipeListTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.recipeName {
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.recipeName:hover {
+  background-color: orange;
+  width: 100%;
+}
+
+/* Home.js displayed recipe */
+.displayRecipeContainer {
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+#homeTitle {
+  margin-top: 20px;
+}
+
+.singleRecipeDisplayed {
+  margin-top: 30px;
+  /* width: 200%; */
+  width: 750px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(211, 211, 211);
+}
+
+.ingredients {
+  margin-top: 20px;
 }

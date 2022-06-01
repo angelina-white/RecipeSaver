@@ -87,6 +87,20 @@
         "asdf"
       ],
       "id": 6
+    },
+    {
+      "name": "Mac n cheese",
+      "image": "image.afjiweoaf",
+      "ingredients": [
+        "3/4 cup pasta",
+        "cheese",
+        "almond milk"
+      ],
+      "instructions": [
+        "boil pasta",
+        "mix everything"
+      ],
+      "id": 7
     }
   ]
 }
