@@ -93,6 +93,18 @@ function Form()
 
         console.log(newObj)
 
+        fetch("http://localhost:3000/recipes",
+        {
+            method: "POST",
+            headers:
+            {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newObj)
+        })
+        .then(resp => resp.json())
+        .then((data) => console.log(data))
+
     }
 
 
