@@ -1,7 +1,7 @@
 import { useState } from "react"
 import FormIng from "./FormIng"
 import FormInst from "./FormInst"
-
+import { Container, Row, Col, Stack } from 'react-bootstrap';
 
 function Form()
 {
@@ -110,36 +110,45 @@ function Form()
 
 
     return (
-        <div>
-            <h2>Add Recipe:</h2>
-            <div>
-                <label>
-                    Name:
-                    <input name="name" onChange={handleName} placeholder="Enter..." />
-                </label>
-                <label>
-                    Image Link:
-                    <input name="image" onChange={handleImage} placeholder="Enter..." />
-                </label>
-
-                <label>
-                    Ingredients: 
-                    <input name="ingredient" onChange={handleIngredient} placeholder="Enter" />
-                    <button onClick={addIng}>Add ingredient</button>
-                    <ul>
-                        {dispIng}
-                    </ul>
-                </label>
-                <label>
-                    Instructions: 
-                    <input name="instruction" onChange={handleInstruction} placeholder="Instuction" />
-                    <button onClick={addInst}>Add instruction</button>
-                    <ul>
-                        {dispInst}
-                    </ul>
-                </label>
-                <button onClick={handleSubmit}>Submit</button>
-            </div>
+        <div class="formContainer">
+            <Container>
+                <Row>
+                    <Col>
+                        <h1 id="formTitle">Add Recipe:</h1>
+                        <div>
+                            <Stack gap={5}>
+                                <div>
+                                    <label class="label">Name:</label>
+                                    <input class="input" name="name" onChange={handleName} placeholder="Enter..." />
+                                </div>
+                                <div>
+                                    <label class="label">Image Link:</label>
+                                    <input class="input" name="image" onChange={handleImage} placeholder="Enter..." />
+                                </div>
+                                <div class="ingContainer">
+                                    <label class="label">Ingredients:</label>
+                                    <input class="input" name="ingredient" onChange={handleIngredient} placeholder="Enter" />
+                                    <button class="formAddButton" onClick={addIng}>Add ingredient</button>
+                                    <ul>
+                                        {dispIng}
+                                    </ul>
+                                </div>
+                                <div class="instContainer">
+                                    <label class="label">Instructions:</label>
+                                    <input class="input" name="instruction" onChange={handleInstruction} placeholder="Instuction" />
+                                    <button  class="formAddButton" onClick={addInst}>Add instruction</button>
+                                    <ol>
+                                        {dispInst}
+                                    </ol>
+                                </div>
+                            </Stack>
+                            <div class="submitButtonContainer">
+                                <button id="formSubmitButton" onClick={handleSubmit}>Submit</button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }

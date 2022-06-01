@@ -3,6 +3,7 @@ h1 {
   text-align: center;
 }
 
+
 /* App.js title */
 .titleContainer {
   background-color: pink;
@@ -13,6 +14,7 @@ h1 {
 #title {
   font-size: 50px;
 }
+
 
 /* App.js navBar */
 .navBarContainer {
@@ -30,12 +32,13 @@ h1 {
   background-color: yellow;
 }
 
+
 /* Home.js recipe list */
 .recipeListContainer {
   background-color: green;
   height: 200%;
   margin-top: -76px;
-  margin-left: -72px;
+  margin-left: -90px;
 }
 
 #recipeListTitle {
@@ -57,6 +60,7 @@ h1 {
   width: 100%;
 }
 
+
 /* Home.js displayed recipe */
 .displayRecipeContainer {
   margin-left: 100px;
@@ -69,7 +73,6 @@ h1 {
 
 .singleRecipeDisplayed {
   margin-top: 30px;
-  /* width: 200%; */
   width: 750px;
   padding: 30px;
   border-radius: 10px;
@@ -78,4 +81,88 @@ h1 {
 
 .ingredients {
   margin-top: 20px;
+}
+
+
+/* Form.js */
+.formContainer {
+  padding: 40px;
+  background-color: green;
+  margin-top: 75px;
+  margin-left: 150px;
+  width: 75%;
+  border-radius: 25px;;
+}
+
+#formTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-right: 25px;
+  display: inline-block;
+  font-size: 30px;
+}
+
+.input {
+  font-size: 25px;
+  width: 550px;
+}
+
+.ingUL {
+  float: left;
+}
+
+.formAddButton {
+  margin-left: 20px;
+  font-size: 20px;
+  height: 40px;
+  margin-top: 5px;
+  position: absolute;
+}
+
+#formSubmitButton {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.submitButtonContainer {
+  text-align: center;
+}
+
+/* FormIng.js */
+.ingContainer {
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.ingItem {
+  background-color: rgb(211, 211, 211);
+  float: left;
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.instContainer {
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.instItem {
+  background-color: rgb(211, 211, 211);
+  border-radius: 10px;
+  padding: 10px;
+  width: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.xButton {
+  font-size: 15px;
 }

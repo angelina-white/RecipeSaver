@@ -1,3 +1,5 @@
+import { Stack } from 'react-bootstrap';
+
 function FormIng({item, removeIng})
 {
 
@@ -7,9 +9,11 @@ function FormIng({item, removeIng})
     }
 
     return (
-        <div>
-            <h3>{item}</h3>
-            <button onClick={handleClick}>X</button>
+        <div class="ingItem">
+            <Stack direction="horizontal" >
+                <h3>{item}</h3>
+                <button class="xButton" onClick={handleClick}>X</button>
+            </Stack>
         </div>
     )
 }
