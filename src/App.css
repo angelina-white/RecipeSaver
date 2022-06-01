@@ -1,24 +1,26 @@
 /* All */
 h1 {
   text-align: center;
+  color: #F35588;
 }
 
 
 /* App.js title */
 .titleContainer {
-  background-color: pink;
+  background-color: #9BD192;
   height: 85p x;
   padding: 10px;
 }
 
 #title {
   font-size: 50px;
+  color: black;
 }
 
 
 /* App.js navBar */
 .navBarContainer {
-  background-color: aquamarine;
+  background-color: #D4F0C2;
   font-size: 20px;
   height: 40px;
 }
@@ -26,17 +28,18 @@ h1 {
 .navLinks {
   list-style: none;
   padding: 5px;
+  color: black;
 }
 
 .navLinks:hover { 
-  background-color: yellow;
+  background-color: #4E7039;
 }
 
 
 /* Home.js recipe list */
 .recipeListContainer {
-  background-color: green;
-  height: 200%;
+  background-color: #FFDCD6;
+  height: 150%;
   margin-top: -76px;
   margin-left: -90px;
 }
@@ -56,7 +59,7 @@ h1 {
 }
 
 .recipeName:hover {
-  background-color: orange;
+  background-color: #F35588;
   width: 100%;
 }
 
@@ -65,6 +68,7 @@ h1 {
 .displayRecipeContainer {
   margin-left: 100px;
   margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 #homeTitle {
@@ -76,7 +80,7 @@ h1 {
   width: 750px;
   padding: 30px;
   border-radius: 10px;
-  background-color: rgb(211, 211, 211);
+  background-color: #FFBBB4;;
 }
 
 .ingredients {
@@ -87,8 +91,8 @@ h1 {
 /* Form.js */
 .formContainer {
   padding: 40px;
-  background-color: green;
-  margin-top: 75px;
+  background-color: #FFDCD6;
+  margin-top: 50px;
   margin-left: 150px;
   width: 75%;
   border-radius: 25px;;
@@ -133,13 +137,13 @@ h1 {
 
 /* FormIng.js */
 .ingContainer {
-  background-color: white;
+  background-color: #FFF8F7;
   border-radius: 25px;
   padding: 20px;
 }
 
 .ingItem {
-  background-color: rgb(211, 211, 211);
+  background-color: #F35588;
   float: left;
   border-radius: 10px;
   padding: 10px;
@@ -149,13 +153,13 @@ h1 {
 }
 
 .instContainer {
-  background-color: white;
+  background-color: #FFF8F7;
   border-radius: 25px;
   padding: 20px;
 }
 
 .instItem {
-  background-color: rgb(211, 211, 211);
+  background-color: #F35588;
   border-radius: 10px;
   padding: 10px;
   width: auto;

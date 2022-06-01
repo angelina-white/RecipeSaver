@@ -13,21 +13,23 @@ function Home({ recipeList })
     }
     
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <h1 id="homeTitle">Home</h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col md="2">
-                        <RecipeList recipeList={ recipeList } handleRecipeClick={ handleRecipeClick }/>
-                </Col>
-                <Col md="auto">
-                    <DisplayRecipe recipeList={ recipeList } clickedId={ clickedId } />
-                </Col>
-            </Row>
-        </Container>
+        <div className="display">
+            <Container>
+                <Row>
+                    <Col>
+                        <h1 id="homeTitle">Home</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md="2">
+                            <RecipeList recipeList={ recipeList } handleRecipeClick={ handleRecipeClick }/>
+                    </Col>
+                    <Col md="10">
+                        <DisplayRecipe recipeList={ recipeList } clickedId={ clickedId } />
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     )
 }
 
