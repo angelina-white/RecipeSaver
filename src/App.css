@@ -56,7 +56,9 @@ h1 {
 /* Home.js */
 .homePage {
   height: 1000vh;
+  width: 100%;
 }
+
 .homeTitle {
   margin-top: 25px;
   margin-left: 100px;
@@ -64,15 +66,24 @@ h1 {
   position: absolute;
 }
 
-.imagesDisp {
-  margin-left: -71px;
+/* color panel animation attempt */
+.box {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
 }
 
-.homeImages {
-  height: 100vh; 
-  width: 100%;
-  position: absolute;
+#pinkBox {
   margin-top: 500px;
+  background-color: pink;
+}
+
+#redBox {
+  background-color: red;
+}
+
+#orangeBox {
+  background-color: orange;
 }
 
 
