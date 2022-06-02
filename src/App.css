@@ -1,14 +1,24 @@
 /* All */
+.App {
+  background-color: #FFF8F7;
+  width: 100%;
+  height: 100vh;
+}
+
 h1 {
   text-align: center;
   color: #F35588;
 }
 
+#loader {
+  text-align: center;
+  padding-top: 45vh;
+}
 
 /* App.js title */
 .titleContainer {
   background-color: #9BD192;
-  height: 85p x;
+  height: 85px;
   padding: 10px;
 }
 
@@ -31,15 +41,28 @@ h1 {
   color: black;
 }
 
+.links {
+  color:black;
+}
+
+.links:hover {
+  color: white;
+}
+
 .navLinks:hover { 
   background-color: #4E7039;
 }
 
+/* Home.js */
+#homeTitle {
+  margin-top: 20px;
+}
 
-/* Home.js recipe list */
+
+/* RecipeMain.js recipe list */
 .recipeListContainer {
   background-color: #FFDCD6;
-  height: 150%;
+  height: 82vh;
   margin-top: -76px;
   margin-left: -90px;
 }
@@ -64,14 +87,13 @@ h1 {
 }
 
 
-/* Home.js displayed recipe */
+/* RecipeMain.js displayed recipe */
 .displayRecipeContainer {
   margin-left: 100px;
   margin-top: 40px;
-  margin-bottom: 60px;
 }
 
-#homeTitle {
+#recipeTitle {
   margin-top: 20px;
 }
 

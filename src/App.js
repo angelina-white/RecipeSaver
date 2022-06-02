@@ -1,17 +1,39 @@
 import './App.css';
 import { useEffect, useState } from "react";
-import Home from "./Components/Home/Home";
+import RecipeMain from "./Components/RecipeMain/RecipeMain";
 import Form from "./Components/Form/Form";
+import Home from "./Components/Home";
 import Search from "./Components/Search/Search";
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Stack } from 'react-bootstrap';
+import SyncLoader from "react-spinners/SyncLoader";
+import { gsap } from "gsap";
 
 function App() 
 {
+  // loading screen
+  const [loading, setLoading] = useState(false);
+  useEffect(() =>
+  {
+    setLoading(true)
+    setTimeout(() =>
+    {
+      setLoading(false)
+    }, 2000)
+  }, [])
 
-  const [recipeList, setRecipeList] = useState([])
+  //fade in
+  useEffect(() =>
+  {
+    setTimeout(() =>
+    {
+      gsap.from(".homePage", {duration: 1, opacity: 0});
+    }, 2010)
+  }, [])
 
+  //fetch data from database
+  const [recipeList, setRecipeList] = useState([]);
   useEffect(() =>
   {
     fetch("http://localhost:3000/recipes")
@@ -22,6 +44,9 @@ function App()
 
   return (
     <div className="App">
+
+    {loading ? <div id="loader" ><SyncLoader color={"#FFB5D4"} loading={loading} size={30} /></div> :
+    <div class="homePage">
       <div class="titleContainer">
         <Container>
           <Row>
@@ -37,9 +62,10 @@ function App()
             <Row>
               <Col>
                 <Stack direction="horizontal" gap={3}>
-                  <li class="navLinks"><Link to='/'>Home</Link></li>
-                  <li class="navLinks"><Link to='form'>Add Recipe</Link></li>
-                  <li class="navLinks"><Link to='search'>Search</Link></li>
+                  <li class="navLinks"><Link className="links" to='/'>Home</Link></li>
+                  <li class="navLinks"><Link className="links" to='/recipes'>Recipes</Link></li>
+                  <li class="navLinks"><Link className="links" to='form'>Add Recipe</Link></li>
+                  <li class="navLinks"><Link className="links" to='search'>Search</Link></li>
                 </Stack>
               </Col>
             </Row>
@@ -47,14 +73,15 @@ function App()
         </div>
             
         <Routes>
-          <Route path='/' element={ <Home recipeList={ recipeList }/>} />
+          <Route path='/' element={ <Home />} />
+          <Route path='/recipes' element={ <RecipeMain recipeList={ recipeList }/>} />
           <Route path='/form' element={ <Form />} />
           <Route path='/search' element={ <Search recipeList={ recipeList }/>} />
         </Routes>
       </Router>
     </div>
-
-    
+    }
+    </div>
   );
 }
 

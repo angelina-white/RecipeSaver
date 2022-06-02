@@ -3,7 +3,7 @@ import RecipeList from "./RecipeList"
 import DisplayRecipe from "./DisplayRecipe"
 import { Container, Row, Col } from 'react-bootstrap';
 
-function Home({ recipeList })
+function RecipesMain({ recipeList })
 {
     //click on recipe that is listed
     const [clickedId, setClickedId] = useState("")
@@ -17,7 +17,7 @@ function Home({ recipeList })
             <Container>
                 <Row>
                     <Col>
-                        <h1 id="homeTitle">Home</h1>
+                        <h1 id="recipeTitle">Recipes</h1>
                     </Col>
                 </Row>
                 <Row>
@@ -33,4 +33,4 @@ function Home({ recipeList })
     )
 }
 
-export default Home
+export default RecipesMain
