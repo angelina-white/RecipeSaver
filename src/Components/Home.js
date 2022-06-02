@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { gsap } from "gsap";
+import itemData from "../data/item";
 
 function Home()
 {
@@ -12,9 +13,17 @@ function Home()
         })
     }, [])
 
+    const imageList = itemData.map((item) =>
+    {
+        return (
+            <img class="homeImages" src={item} />
+        )
+    })
+
     return (
         <div>
             <h1 id="homeTitle">Home</h1>
+            {imageList}
         </div>
     )
 }
