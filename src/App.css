@@ -67,23 +67,46 @@ h1 {
 }
 
 /* color panel animation attempt */
-.box {
+.cont {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* .box {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+} */
+
+#purpleBox {
+  background-color: purple;
   height: 100vh;
   margin-left: -100px;
   width: 115%;
 }
 
-#pinkBox {
-  margin-top: 500px;
+.pink {
   background-color: pink;
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
 }
 
-#redBox {
+.red {
   background-color: red;
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
 }
 
-#orangeBox {
+.orange {
   background-color: orange;
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
 }
 
 

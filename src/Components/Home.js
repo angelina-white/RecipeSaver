@@ -18,67 +18,65 @@ function Home()
     }, [])
 
     // scrolling
-    // useEffect(() =>
-    // {       
-    //     gsap.defaults({ease: "none", duration: 2});
-        
-    //     const tl = gsap.timeline();
-    //     tl.from("#imageA", {xPercent: -100})
-    //       .from("#imageB", {xPercent: 100})
-    //       .from("#imageC", {xPercent: -100})
-        
-    //     ScrollTrigger.create({
-    //       animation: tl,
-    //       trigger: "#imagesDisp",
-    //       start: "top top",
-    //       end: "+=500",
-    //       scrub: true,
-    //       pin: true,
-    //       anticipatePin: 1
-    //     })
-
-    // }, [])
-
-
     useEffect(() =>
     {
         gsap.defaults({ease: "none", duration: 2});
 
-        gsap.from("#pinkBox", {
-            scrollTrigger: {
-                trigger: "#pinkBox",
-                toggleActions: "restart pause reverse pause",
-                start: "top center",
-                scrub: true,
-                pin: true,
-                pinSpacing: false
-            },
-            x: -500,
-        });
+        let sections = gsap.utils.toArray(".panel");
 
-        gsap.from("#redBox", {
-            scrollTrigger: {
-                trigger: "#redBox",
-                toggleActions: "restart pause reverse pause",
-                start: "top center",
-                scrub: true,
-                pin: true,
-                pinSpacing: false
-            },
-            x: 500,
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".cont",
+            pin: true,
+            scrub: 1,
+            snap: 1 / (sections.length - 1),
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: "+=3500",
+          }
         });
+        
+        
+        
 
-        gsap.from("#orangeBox", {
-            scrollTrigger: {
-                trigger: "#orangeBox",
-                toggleActions: "restart pause reverse pause",
-                start: "top center",
-                scrub: true,
-                pin: true,
-                pinSpacing: false
-            },
-            x: -500,
-        });
+        // gsap.from("#pinkBox", {
+        //     scrollTrigger: {
+        //         trigger: "#container",
+        //         toggleActions: "restart pause reverse pause",
+        //         start: "top top",
+        //         end: "=+1000",
+        //         scrub: true,
+        //         pin: true,
+        //         pinSpacing: false
+        //     },
+        //     // x: -1650,
+        //     x: -500
+        // });
+
+        // gsap.from("#redBox", {
+        //     scrollTrigger: {
+        //         trigger: "#redBox",
+        //         toggleActions: "restart pause reverse pause",
+        //         start: "top top",
+        //         scrub: true,
+        //         pin: true,
+        //         pinSpacing: false
+        //     },
+        //     x: 1650,
+        // });
+
+        // gsap.from("#orangeBox", {
+        //     scrollTrigger: {
+        //         trigger: "#orangeBox",
+        //         toggleActions: "restart pause reverse pause",
+        //         start: "top top",
+        //         scrub: true,
+        //         pin: true,
+        //         pinSpacing: false
+        //     },
+        //     x: -1650,
+        // });
 
     }, [])
 
@@ -87,34 +85,21 @@ function Home()
             <Container>
                 <Row>
                     <Col>
+                    <div class="box" id="purpleBox">
                         <h1 class="homeTitle">Home</h1>
+                    </div>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        {/* <div class="imagesDisp">
-                            <img class="homeImages" id="imageA" src="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Puttanesca-fd5810c.jpg" />
-                            <img class="homeImages" id="imageB" src="https://static.onecms.io/wp-content/uploads/sites/44/2022/03/01/cucumber-sandwich.jpg" />
-                            <img class="homeImages" id="imageC" src="https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-scallops-with-chimichurri.jpg?quality=82&strip=1" />
-                        </div> */}
-                        <div class="boxContainer">
-                            <div class="box" id="pinkBox"></div>
-                        </div>                        
-                        <div class="boxContainer">
-                            <div class="box" id="redBox"></div>
-                        </div>
-                        <div class="boxContainer">
-                            <div class="box" id="orangeBox"></div>
-                        </div>
+                        <div class="cont">
+                            <section class="panel pink">One</section>
+                            <section class="panel red">Two</section>
+                            <section class="panel orange">Three</section>
+                        </div>                     
                     </Col>
                 </Row>
             </Container>
-
-
-                {/* <img class="homeImages" id="imageA" src="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Puttanesca-fd5810c.jpg" /> */}
-                {/* <img class="homeImages" id="imageB" src="https://static.onecms.io/wp-content/uploads/sites/44/2022/03/01/cucumber-sandwich.jpg" /> */}
-                {/* <img class="homeImages" id="imageC" src="https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-scallops-with-chimichurri.jpg?quality=82&strip=1" /> */}
-
         </div>
     )
 }
