@@ -20,7 +20,7 @@ function App()
     setTimeout(() =>
     {
       setLoading(false)
-    }, 2000)
+    }, 1000)
   }, [])
 
   //fade in
@@ -29,7 +29,7 @@ function App()
     setTimeout(() =>
     {
       gsap.from(".homePage", {duration: 1, opacity: 0});
-    }, 2010)
+    }, 1010)
   }, [])
 
   //fetch data from database
