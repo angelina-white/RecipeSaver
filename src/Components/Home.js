@@ -69,6 +69,7 @@ function Home()
                     <Col>
                         <div class="box" id="purpleBox">
                             <h1 class="homeTitle">Home</h1>
+                            <h2 id="homeDes">Web app to store all of your favorite websites!</h2>
                             <h3 id="galleryScroll">Scroll down for gallery</h3>
                         </div>
                     </Col>
