@@ -11,7 +11,7 @@ function Home()
     //make title come in from right
     useEffect(() =>
     {
-        gsap.from("#homeTitle", {
+        gsap.from(".homeTitle", {
             x: 50,
             duration: 1
         })
@@ -22,6 +22,29 @@ function Home()
     {
         gsap.defaults({ease: "none", duration: 2});
 
+        //yellow coming in from right
+        gsap.from(".yellow", {
+            scrollTrigger:
+            {
+                trigger: ".yellow",
+                start: "top top",
+                pin: true,
+                scrub: true,
+            }, x: -1700
+        })
+
+        gsap.from(".blue", {
+            scrollTrigger:
+            {
+                trigger: ".blue",
+                start: "top top",
+                pin: true,
+                scrub: true,
+            }, x: 1700
+        })
+
+
+        //horizontal scrolling
         let sections = gsap.utils.toArray(".panel");
 
         gsap.to(sections, {
@@ -36,66 +59,38 @@ function Home()
             end: "+=3500",
           }
         });
-        
-        
-        
+    })
 
-        // gsap.from("#pinkBox", {
-        //     scrollTrigger: {
-        //         trigger: "#container",
-        //         toggleActions: "restart pause reverse pause",
-        //         start: "top top",
-        //         end: "=+1000",
-        //         scrub: true,
-        //         pin: true,
-        //         pinSpacing: false
-        //     },
-        //     // x: -1650,
-        //     x: -500
-        // });
-
-        // gsap.from("#redBox", {
-        //     scrollTrigger: {
-        //         trigger: "#redBox",
-        //         toggleActions: "restart pause reverse pause",
-        //         start: "top top",
-        //         scrub: true,
-        //         pin: true,
-        //         pinSpacing: false
-        //     },
-        //     x: 1650,
-        // });
-
-        // gsap.from("#orangeBox", {
-        //     scrollTrigger: {
-        //         trigger: "#orangeBox",
-        //         toggleActions: "restart pause reverse pause",
-        //         start: "top top",
-        //         scrub: true,
-        //         pin: true,
-        //         pinSpacing: false
-        //     },
-        //     x: -1650,
-        // });
-
-    }, [])
 
     return (
         <div class="homePage">
             <Container>
                 <Row>
                     <Col>
-                    <div class="box" id="purpleBox">
-                        <h1 class="homeTitle">Home</h1>
-                    </div>
+                        <div class="box" id="purpleBox">
+                            <h1 class="homeTitle">Home</h1>
+                            <h3 id="galleryScroll">Scroll down for gallery</h3>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div class="leftRight">
+                            <img className="yellow box" src="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Puttanesca-fd5810c.jpg" />
+                            <img class="green" src="https://static.onecms.io/wp-content/uploads/sites/44/2022/03/01/cucumber-sandwich.jpg" />
+                            <img class="greenblue" src="https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,c_fill,g_auto,w_1500,ar_3:2/https%3A%2F%2Fs3.amazonaws.com%2Fpixtruder%2Foriginal_images%2Ff5cffedb779ce8ea3991f8020b5616d39ef6c0ee" />
+                            <img class="blue" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F02%2F23%2F15925-creamy-au-gratin-potatoes-mfs_121.jpg" />
+                            <img class="bluebluepurple" src="https://www.budgetbytes.com/wp-content/uploads/2019/10/Creamy-Pesto-Chicken-Pasta-close-skillet.jpg" />
+                            <img class="bluepurplepurple" src="https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg" />
+                        </div>                     
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <div class="cont">
-                            <section class="panel pink">One</section>
-                            <section class="panel red">Two</section>
-                            <section class="panel orange">Three</section>
+                            <img class="panel" src="https://www.eatthis.com/wp-content/uploads/sites/4/2018/12/paleo-scallops-with-chimichurri.jpg?quality=82&strip=1"/>
+                            <img class="panel" src="https://static.onecms.io/wp-content/uploads/sites/9/2022/04/15/Tamarind-Chicken-FT-RECIPE0522.jpg"/>
+                            <img class="panel" src="https://img.delicious.com.au/5aLcV7cG/del/2021/05/slow-roasted-butter-eggplant-curry-152139-2.jpg"/>
                         </div>                     
                     </Col>
                 </Row>

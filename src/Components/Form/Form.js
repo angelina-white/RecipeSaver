@@ -111,40 +111,42 @@ function Form()
 
     return (
         <div class="formContainer">
-            <Container>
-                <Row>
-                    <Col>
-                        <h1 id="formTitle">Add Recipe:</h1>
-                        <div>
-                            <Stack gap={5}>
-                                <div>
-                                    <input class="input" name="name" onChange={handleName} placeholder="Name..." />
+            <div class="formBackground">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1 id="formTitle">Add Recipe:</h1>
+                            <div>
+                                <Stack gap={5}>
+                                    <div>
+                                        <input class="input" name="name" onChange={handleName} placeholder="Name..." />
+                                    </div>
+                                    <div>
+                                        <input class="input" name="image" onChange={handleImage} placeholder="Image link..." />
+                                    </div>
+                                    <div>
+                                        <input class="input" name="ingredient" onChange={handleIngredient} placeholder="Ingredient..." />
+                                        <button class="formAddButton" onClick={addIng}>Add ingredient</button>
+                                        <ul>
+                                            {dispIng}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <input class="input" name="instruction" onChange={handleInstruction} placeholder="Instruction..." />
+                                        <button  class="formAddButton" onClick={addInst}>Add instruction</button>
+                                        <ol>
+                                            {dispInst}
+                                        </ol>
+                                    </div>
+                                </Stack>
+                                <div class="submitButtonContainer">
+                                    <button id="formSubmitButton" onClick={handleSubmit}>Submit</button>
                                 </div>
-                                <div>
-                                    <input class="input" name="image" onChange={handleImage} placeholder="Image link..." />
-                                </div>
-                                <div>
-                                    <input class="input" name="ingredient" onChange={handleIngredient} placeholder="Ingredient..." />
-                                    <button class="formAddButton" onClick={addIng}>Add ingredient</button>
-                                    <ul>
-                                        {dispIng}
-                                    </ul>
-                                </div>
-                                <div>
-                                    <input class="input" name="instruction" onChange={handleInstruction} placeholder="Instruction..." />
-                                    <button  class="formAddButton" onClick={addInst}>Add instruction</button>
-                                    <ol>
-                                        {dispInst}
-                                    </ol>
-                                </div>
-                            </Stack>
-                            <div class="submitButtonContainer">
-                                <button id="formSubmitButton" onClick={handleSubmit}>Submit</button>
                             </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     )
 }

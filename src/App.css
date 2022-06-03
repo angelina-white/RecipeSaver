@@ -2,7 +2,7 @@
 .App {
   background-color: #FFF8F7;
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 h1 {
@@ -55,7 +55,6 @@ h1 {
 
 /* Home.js */
 .homePage {
-  height: 1000vh;
   width: 100%;
 }
 
@@ -63,10 +62,68 @@ h1 {
   margin-top: 25px;
   margin-left: 100px;
   float: left;
-  position: absolute;
 }
 
 /* color panel animation attempt */
+#galleryScroll {
+  margin-top: 300px;
+  float: left;
+  margin-left: -100px;
+}
+
+#purpleBox {
+  background-color: #FFF8F7;
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+  position: relative;
+}
+
+.box {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+}
+
+.yellow {
+  /* height: 100vh;
+  margin-left: -100px;
+  width: 115%; */
+  position: absolute;
+}
+
+.green {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+}
+
+.greenblue {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+}
+
+.blue {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+  position: absolute;
+}
+
+.bluebluepurple {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+}
+
+.bluepurplepurple {
+  height: 100vh;
+  margin-left: -100px;
+  width: 115%;
+}
+
+
 .cont {
   overscroll-behavior: none;
   width: 600%;
@@ -75,35 +132,23 @@ h1 {
   flex-wrap: nowrap;
 }
 
-/* .box {
-  height: 100vh;
-  margin-left: -100px;
-  width: 115%;
-} */
-
-#purpleBox {
-  background-color: purple;
+.panel {
   height: 100vh;
   margin-left: -100px;
   width: 115%;
 }
 
 .pink {
-  background-color: pink;
-  height: 100vh;
+  /* height: 100vh;
   margin-left: -100px;
-  width: 115%;
+  width: 115%; */
 }
-
 .red {
-  background-color: red;
   height: 100vh;
   margin-left: -100px;
   width: 115%;
 }
-
 .orange {
-  background-color: orange;
   height: 100vh;
   margin-left: -100px;
   width: 115%;
@@ -111,9 +156,12 @@ h1 {
 
 
 /* RecipeMain.js recipe list */
+.display {
+  height: 100vh;
+}
 .recipeListContainer {
   background-color: #FFDCD6;
-  height: 82vh;
+  height: 100vh;
   margin-top: -76px;
   margin-left: -90px;
 }
@@ -151,7 +199,10 @@ h1 {
 .singleRecipeDisplayed {
   margin-top: 30px;
   width: 750px;
-  padding: 30px;
+  padding-right: 30px;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 40px;
   border-radius: 10px;
   background-color: #FFDCD6;
 }
@@ -163,12 +214,16 @@ h1 {
 
 /* Form.js */
 .formContainer {
-  padding: 40px;
-  background-color: #FFDCD6;
   margin-top: 50px;
-  margin-left: 150px;
+  margin-left: 170px;
   width: 75%;
-  border-radius: 25px;;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+.formBackground {
+  background-color: #FFDCD6;
+  padding: 30px;
+  border-radius: 25px;
 }
 
 #formTitle {
@@ -231,4 +286,30 @@ h1 {
 
 .xButton {
   font-size: 15px;
+}
+
+/*Search.js*/
+.searchContainer {
+  padding-bottom: 50px;
+  height: 125vh;
+}
+
+#searchTitle {
+  margin-top: 20px;
+}
+
+.searchForm {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.searchList {
+  list-style: none;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.searchRecipeContent {
+  margin-left: 350px;
 }

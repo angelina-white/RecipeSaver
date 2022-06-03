@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Recipe from "../Recipe"
 import SearchName from "./SearchName"
+import { Container, Row, Col, Stack } from 'react-bootstrap';
 
 function Search({ recipeList })
 {
@@ -62,15 +63,37 @@ function Search({ recipeList })
 
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Enter recipe here..." onChange={handleChange} />
-                <button>Search</button>
-            </form>
-            <ul>
-                {displayedList}
-            </ul>
-            {displayFull}
+        <div class="searchContainer">
+            <Container>
+                <Row>
+                    <Col>
+                        <h1 id="searchTitle">Search</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                    <form class="searchForm" onSubmit={handleSubmit}>
+                        <input type="text" placeholder="Enter recipe here..." onChange={handleChange} />
+                        <button>Search</button>
+                    </form>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <ul class="searchList">
+                            <h3>Results:</h3>
+                            {displayedList}
+                        </ul>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div class="searchRecipeContent">
+                            {displayFull}
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }
