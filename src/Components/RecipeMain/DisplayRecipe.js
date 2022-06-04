@@ -3,8 +3,6 @@ import {useState} from "react"
 
 function DisplayRecipe({ recipeList, clickedId, initialBool })
 {
-    const [isInitial, setIsInitial] = useState(true)
-
     const initialFilt = recipeList.filter((item) => item.id == 1)
 
     const initialDisp = initialFilt.map((item) =>
