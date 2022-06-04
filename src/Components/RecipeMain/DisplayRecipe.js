@@ -1,6 +1,19 @@
 import Recipe from "../Recipe"
-function DisplayRecipe({ recipeList, clickedId })
+import {useState} from "react"
+
+function DisplayRecipe({ recipeList, clickedId, initialBool })
 {
+    const [isInitial, setIsInitial] = useState(true)
+
+    const initialFilt = recipeList.filter((item) => item.id == 1)
+
+    const initialDisp = initialFilt.map((item) =>
+    {
+        return (
+            <Recipe item={item} />
+        )
+    })
+
 
     const clickedItem = recipeList.filter((item) =>
     {
@@ -18,7 +31,7 @@ function DisplayRecipe({ recipeList, clickedId })
 
     return(
         <div class="displayRecipeContainer">
-            {displayItem}
+            { initialBool ? initialDisp : displayItem }
         </div>
     )
 }

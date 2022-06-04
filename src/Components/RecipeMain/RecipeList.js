@@ -3,6 +3,7 @@ import { Stack } from 'react-bootstrap';
 
 function RecipeList({ recipeList, handleRecipeClick })
 {
+
     const nameList = recipeList.map((item) =>
     {
         return (

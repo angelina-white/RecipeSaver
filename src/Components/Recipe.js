@@ -28,6 +28,7 @@ function Recipe({ item })
             <ol>
                 {displayInstructions}
             </ol>
+            <button class="deleteRecipe">Delete</button>
         </div>
     )
 }
