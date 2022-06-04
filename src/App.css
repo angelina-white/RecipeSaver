@@ -190,6 +190,27 @@ h1 {
   height: 100vh;
 }
 
+.catCardContainer {
+  height: 420px;
+  width: 420px;
+  padding: 20px;
+  background-color: white;
+  float: left;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.catNames {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.catImage {
+  margin-top: 20px;
+  height: 300px;
+  width: 300px;
+}
+
 
 /* Form.js */
 .formContainer {
