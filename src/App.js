@@ -1,10 +1,11 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import RecipeMain from "./Components/RecipeMain/RecipeMain";
-import Categories from "./Components/Categories";
+import Categories from "./Components/Categories/Categories";
 import Form from "./Components/Form/Form";
 import Home from "./Components/Home";
 import Search from "./Components/Search/Search";
+import Breakfast from "./Components/Categories/Breakfast"
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Stack } from 'react-bootstrap';
@@ -77,7 +78,7 @@ function App()
               <Col>
                 <Stack direction="horizontal" gap={3}>
                   <li class="navLinks"><Link className="links" to='/'>Home</Link></li>
-                  <li class="navLinks"><Link className="links" to='recipes'>Recipes</Link></li>
+                  <li class="navLinks"><Link className="links" to='recipes'>All Recipes</Link></li>
                   <li class="navLinks"><Link className="links" to='categories'>Categories</Link></li>
                   <li class="navLinks"><Link className="links" to='form'>Add Recipe</Link></li>
                   <li class="navLinks"><Link className="links" to='search'>Search</Link></li>
@@ -93,6 +94,7 @@ function App()
           <Route path='/categories' element={ <Categories />} />
           <Route path='/form' element={ <Form addRecipe={ addRecipe }/>} />
           <Route path='/search' element={ <Search recipeList={ recipeList }/>} />
+          <Route path='/categories/breakfast' element={ <Breakfast />} />
         </Routes>
       </Router>
     </div>

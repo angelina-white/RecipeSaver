@@ -20,6 +20,13 @@ function Form({ addRecipe })
         setImageLink(event.target.value)
     }
 
+    //category
+    const [category, setCategory] = useState("")
+    function handleImage(event)
+    {
+        setCategory(event.target.value)
+    }
+
     //ingredient
     const [ingredient, setIngredient] = useState("")
     function handleIngredient(event)
@@ -88,11 +95,10 @@ function Form({ addRecipe })
         {
             name: name,
             image: imageLink,
+            category: category,
             ingredients: ingList, 
             instructions: instList
         }
-
-        console.log(newObj)
 
         fetch("http://localhost:3000/recipes",
         {
@@ -123,6 +129,9 @@ function Form({ addRecipe })
                                     </div>
                                     <div>
                                         <input class="input" name="image" onChange={handleImage} placeholder="Image link..." />
+                                    </div>
+                                    <div>
+                                        <input class="input" name="category" onChange={handleImage} placeholder="Category..." />
                                     </div>
                                     <div>
                                         <input class="input" name="ingredient" onChange={handleIngredient} placeholder="Ingredient..." />

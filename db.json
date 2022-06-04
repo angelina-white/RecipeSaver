@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Sugar Cookies",
+      "category": "dessert",
       "image": "https://www.twopeasandtheirpod.com/wp-content/uploads/2021/11/ChewySugarCookies-9-500x375.jpg",
       "ingredients": [
         "2 cups flour",
@@ -14,16 +15,16 @@
         "1 tbsp anilla extract"
       ],
       "instructions": [
-        "Fill pot with water",
-        "Put pot on stove and boil",
-        "Fill pot with Pasta",
-        "Cook for the amount of time on box",
-        "Drain pasta and serve"
+        "Preheat oven to 350 degrees",
+        "Mix all ingredients together",
+        "Place little balls of dough onto a cookie sheet",
+        "Cook for 15 minutes"
       ]
     },
     {
       "id": 2,
       "name": "Peanut Butter and Jelly",
+      "category": "lunch",
       "image": "https://i.guim.co.uk/img/media/f98ff0c2b585759d76d38678e03e4f206feb08d0/0_2029_4080_2446/master/4080.jpg?width=1200&quality=85&auto=format&fit=max&s=1867d8d4e9da6b6b31e2dd13e24b3ec1",
       "ingredients": [
         "2 Slices of bread",
@@ -40,6 +41,7 @@
     {
       "id": 3,
       "name": "Parfait",
+      "category": "breakfast",
       "image": "https://i0.wp.com/www.simplysissom.com/wp-content/uploads/2017/01/horizontalparfaityogurt-copy.jpg?fit=680%2C453&ssl=1",
       "ingredients": [
         "Yogurt",
@@ -55,6 +57,7 @@
     {
       "id": 4,
       "name": "Oatmeal",
+      "category": "breakfast",
       "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/11/Oatmeal-Recipe-5.jpg",
       "ingredients": [
         "Oatmeal Packet",
@@ -70,6 +73,7 @@
     {
       "id": 5,
       "name": "Baked Chicken",
+      "category": "dinner",
       "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/2/19/1/FN_Baked-Lemon-Chicken_s4x3.jpg.rend.hgtvcom.616.462.suffix/1392869571393.jpeg",
       "ingredients": [
         "Chicken",
@@ -85,6 +89,7 @@
     {
       "id": 6,
       "name": "Macaroni and Cheese",
+      "category": "dinner",
       "image": "https://www.simplyrecipes.com/thmb/Cszu3K7ZkNAMmQKlqr8bwafF5vs=/1600x1200/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2011__04__civil-war-mac-cheese-horiz-a-1800-ae31efb272d94a7bbb623b3be0feda88.jpg",
       "ingredients": [
         "Pasta",
