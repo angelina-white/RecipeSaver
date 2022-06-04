@@ -18,7 +18,6 @@ function DisplayRecipe({ recipeList, clickedId })
 
     return(
         <div class="displayRecipeContainer">
-            <h2>Recipe:</h2>
             {displayItem}
         </div>
     )

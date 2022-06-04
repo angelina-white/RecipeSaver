@@ -12,7 +12,6 @@ function RecipeList({ recipeList, handleRecipeClick })
 
     return (
         <div class="recipeListContainer">
-                <h1 id="recipeListTitle">Recipes</h1>
                 <Stack gap={3}>
                     {nameList}
                 </Stack>

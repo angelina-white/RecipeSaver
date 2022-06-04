@@ -46,7 +46,7 @@ function App()
     <div className="App">
 
     {loading ? <div id="loader" ><SyncLoader color={"#FFB5D4"} loading={loading} size={30} /></div> :
-    <div class="homePage">
+    <div>
       <div class="titleContainer">
         <Container>
           <Row>

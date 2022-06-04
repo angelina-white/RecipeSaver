@@ -17,7 +17,7 @@ function Recipe({ item })
     return (
         <div class="singleRecipeDisplayed">
             <h3 id="dispRecName">{ name }</h3>
-            {/* <img src={image} /> */}
+            <img class="recipeImage" src={image} />
             <div class="ingredients">
                 <h4>Ingredients:</h4>
                 <ul>
