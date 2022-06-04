@@ -10,6 +10,10 @@ h1 {
   color: #F35588;
 }
 
+.pageTitle {
+  margin-top: 25px;
+}
+
 #loader {
   text-align: center;
   padding-top: 45vh;
@@ -34,6 +38,7 @@ h1 {
   background-color: #D4F0C2;
   font-size: 20px;
   height: 40px;
+  margin-left: -100px;
 }
 
 .navLinks {
@@ -58,10 +63,6 @@ h1 {
 .homePage {
   width: 100%;
   text-align: center;
-}
-
-.homeTitle {
-  margin-top: 25px;
 }
 
 /* color panel animation attempt */
@@ -182,6 +183,11 @@ h1 {
 
 .deleteRecipe {
   margin-top: 20px;
+}
+
+/*Categories.js*/
+.categoriesContainer {
+  height: 100vh;
 }
 
 

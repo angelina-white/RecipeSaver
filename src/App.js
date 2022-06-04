@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from "react";
 import RecipeMain from "./Components/RecipeMain/RecipeMain";
+import Categories from "./Components/Categories";
 import Form from "./Components/Form/Form";
 import Home from "./Components/Home";
 import Search from "./Components/Search/Search";
@@ -76,7 +77,8 @@ function App()
               <Col>
                 <Stack direction="horizontal" gap={3}>
                   <li class="navLinks"><Link className="links" to='/'>Home</Link></li>
-                  <li class="navLinks"><Link className="links" to='/recipes'>Recipes</Link></li>
+                  <li class="navLinks"><Link className="links" to='recipes'>Recipes</Link></li>
+                  <li class="navLinks"><Link className="links" to='categories'>Categories</Link></li>
                   <li class="navLinks"><Link className="links" to='form'>Add Recipe</Link></li>
                   <li class="navLinks"><Link className="links" to='search'>Search</Link></li>
                 </Stack>
@@ -88,6 +90,7 @@ function App()
         <Routes>
           <Route path='/' element={ <Home />} />
           <Route path='/recipes' element={ <RecipeMain recipeList={ recipeList } removeRecipe={ removeRecipe }/>} />
+          <Route path='/categories' element={ <Categories />} />
           <Route path='/form' element={ <Form addRecipe={ addRecipe }/>} />
           <Route path='/search' element={ <Search recipeList={ recipeList }/>} />
         </Routes>

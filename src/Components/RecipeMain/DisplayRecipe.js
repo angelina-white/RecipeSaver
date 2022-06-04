@@ -2,8 +2,9 @@ import Recipe from "./Recipe"
 
 function DisplayRecipe({ recipeList, clickedId, initialBool, removeRecipe })
 {
+    const initialItem = recipeList.filter((item) => item.id == 1)
 
-    const initialDisp = recipeList.map((item) =>
+    const initialDisp = initialItem.map((item) =>
     {
         return (
             <Recipe item={item} removeRecipe={ removeRecipe } />
