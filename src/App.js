@@ -41,6 +41,19 @@ function App()
     .then(setRecipeList)
   }, [])
 
+  //add recipe from form
+  const addRecipe = (item) =>
+  {
+    setRecipeList([...recipeList, item])
+  }
+
+  //remove recipe
+  const removeRecipe = (id) =>
+  {
+    const filteredList = recipeList.filter((item) => item.id !== id)
+    setRecipeList(filteredList)
+  }
+
 
   return (
     <div className="App">
@@ -74,8 +87,8 @@ function App()
             
         <Routes>
           <Route path='/' element={ <Home />} />
-          <Route path='/recipes' element={ <RecipeMain recipeList={ recipeList }/>} />
-          <Route path='/form' element={ <Form />} />
+          <Route path='/recipes' element={ <RecipeMain recipeList={ recipeList } removeRecipe={ removeRecipe }/>} />
+          <Route path='/form' element={ <Form addRecipe={ addRecipe }/>} />
           <Route path='/search' element={ <Search recipeList={ recipeList }/>} />
         </Routes>
       </Router>

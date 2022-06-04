@@ -1,6 +1,6 @@
-function Recipe({ item })
+function Recipe({ item, removeRecipe })
 {
-    const {name, image, ingredients, instructions} = item
+    const {id, name, image, ingredients, instructions} = item
 
     //shows list of ingredients
     const displayIngredients = ingredients.map((item) =>
@@ -13,6 +13,17 @@ function Recipe({ item })
     {
         return <li>{item}</li>
     })
+
+    //deletes recipe
+    function handleDelete()
+    {
+        fetch(`http://localhost:3000/recipes/${id}`,
+        {
+            method: "DELETE"
+        })
+        .then(resp => resp.json())
+        .then(()=> removeRecipe(id))
+    }
 
     return (
         <div class="singleRecipeDisplayed">
@@ -28,7 +39,7 @@ function Recipe({ item })
             <ol>
                 {displayInstructions}
             </ol>
-            <button class="deleteRecipe">Delete</button>
+            <button class="deleteRecipe" onClick={handleDelete}>Delete</button>
         </div>
     )
 }

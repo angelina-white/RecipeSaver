@@ -1,17 +1,14 @@
-import Recipe from "../Recipe"
-import {useState} from "react"
+import Recipe from "./Recipe"
 
-function DisplayRecipe({ recipeList, clickedId, initialBool })
+function DisplayRecipe({ recipeList, clickedId, initialBool, removeRecipe })
 {
-    const initialFilt = recipeList.filter((item) => item.id == 1)
 
-    const initialDisp = initialFilt.map((item) =>
+    const initialDisp = recipeList.map((item) =>
     {
         return (
-            <Recipe item={item} />
+            <Recipe item={item} removeRecipe={ removeRecipe } />
         )
     })
-
 
     const clickedItem = recipeList.filter((item) =>
     {
@@ -23,7 +20,7 @@ function DisplayRecipe({ recipeList, clickedId, initialBool })
     const displayItem = clickedItem.map((item) =>
     {
         return (
-            <Recipe item={ item } />
+            <Recipe item={ item } removeRecipe={ removeRecipe }/>
         )
     })
 

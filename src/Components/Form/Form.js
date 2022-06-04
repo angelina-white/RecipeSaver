@@ -3,7 +3,7 @@ import FormIng from "./FormIng"
 import FormInst from "./FormInst"
 import { Container, Row, Col, Stack } from 'react-bootstrap';
 
-function Form()
+function Form({ addRecipe })
 {
     //name
     const [name, setName] = useState("")
@@ -104,7 +104,7 @@ function Form()
             body: JSON.stringify(newObj)
         })
         .then(resp => resp.json())
-        .then((data) => console.log(data))
+        .then((data) => addRecipe(data))
 
     }
 

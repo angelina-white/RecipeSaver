@@ -1,10 +1,13 @@
 import RecipeName from "./RecipeName"
 import { Stack } from 'react-bootstrap';
+import { useState } from "react";
 
-function RecipeList({ recipeList, handleRecipeClick })
+function RecipeList({ recipeList, handleRecipeClick, removedItem })
 {
 
-    const nameList = recipeList.map((item) =>
+    const filteredList = recipeList.filter((item) => item.id !== removedItem)
+
+    const dispList = filteredList.map((item) =>
     {
         return (
             <RecipeName id={ item.id } item={ item.name } handleRecipeClick={ handleRecipeClick }/>
@@ -14,7 +17,7 @@ function RecipeList({ recipeList, handleRecipeClick })
     return (
         <div class="recipeListContainer">
                 <Stack gap={3}>
-                    {nameList}
+                    {dispList}
                 </Stack>
         </div>
     )

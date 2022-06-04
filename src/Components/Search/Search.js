@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Recipe from "../Recipe"
+import Recipe from "../RecipeMain/Recipe"
 import SearchName from "./SearchName"
 import { Container, Row, Col, Stack } from 'react-bootstrap';
 

@@ -3,7 +3,7 @@ import RecipeList from "./RecipeList"
 import DisplayRecipe from "./DisplayRecipe"
 import { Container, Row, Col } from 'react-bootstrap';
 
-function RecipesMain({ recipeList })
+function RecipesMain({ recipeList, removeRecipe })
 {
     //click on recipe that is listed
     const [clickedId, setClickedId] = useState("")
@@ -24,10 +24,10 @@ function RecipesMain({ recipeList })
                 </Row>
                 <Row>
                     <Col md="2">
-                            <RecipeList recipeList={ recipeList } handleRecipeClick={ handleRecipeClick }/>
+                            <RecipeList recipeList={ recipeList } handleRecipeClick={ handleRecipeClick } />
                     </Col>
                     <Col md="10">
-                        <DisplayRecipe recipeList={ recipeList } clickedId={ clickedId } initialBool={ initialBool }/>
+                        <DisplayRecipe recipeList={ recipeList } clickedId={ clickedId } initialBool={ initialBool } removeRecipe={ removeRecipe }/>
                     </Col>
                 </Row>
             </Container>
